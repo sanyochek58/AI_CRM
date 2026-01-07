@@ -1,0 +1,298 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  height: 92px;
+  width: 100%;
+
+  background:
+    linear-gradient(180deg, rgba(6, 10, 20, 0.92) 0%, rgba(8, 18, 40, 0.92) 100%);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.22);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.35);
+
+  backdrop-filter: blur(10px);
+}
+
+.header-widgets{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 90px; /* увеличьте/уменьшите (например 12-32px) по вкусу */
+}
+
+.header-inner{
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* left */
+.left-header-item{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.title{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+}
+
+.welcome{
+  margin: 0;
+  font-size: 16px;
+  color: rgba(226, 232, 240, 0.78);
+}
+
+/* right: user */
+.right-header-item{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.user-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 72px; /* фиксируем ширину, чтобы ник был ровно под аватаркой */
+}
+
+.user-avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.35),
+    0 0 0 6px rgba(37, 99, 235, 0.10); /* голубое "свечение" */
+}
+
+.user-name{
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.92);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-block{
+  display: flex;
+  flex-direction: column;      /* иконка сверху, текст снизу */
+  align-items: center;
+  gap: 6px;
+  margin-right: 0;
+}
+
+.chat-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* не даём картинке вылезать */
+}
+
+.chat-icon img{
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* делает ч/б-иконку белой на тёмном фоне */
+  opacity: 0.9;
+}
+
+.chat-title{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.92);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.chat-title p{
+  margin: 0; /* убираем дефолтные отступы p */
+}
+
+.analitycs-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-right: 0;
+}
+
+.analitycs-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.analitycs-icon img{
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.analitycs-title{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.92);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.analitycs-title p{
+  margin: 0; 
+}
+
+.clients-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-right: 0;
+}
+
+.clients-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.clients-icon img{
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.clients-title{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.92);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.client-title p{
+  margin: 0; 
+}
+
+.tasks-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-right: 0;
+}
+
+.tasks-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tasks-icon img{
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.tasks-title{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.92);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.tasks-title p{
+  margin: 0; 
+}
+
+/* offset under fixed header */
+.header-offset{
+  height: 92px;
+}
+
+/* mobile */
+@media (max-width: 640px){
+  .header{ height: 76px; }
+  .header-inner{ padding: 0 14px; }
+  .title{ font-size: 18px; }
+  .subtitle{ display: none; }
+  .user-block{ width: 64px; }
+  .user-avatar{ width: 40px; height: 40px; }
+  .header-offset{ height: 76px; }
+}
+
+.widget-item {
+  text-decoration: none;
+  color: inherit;
+  transition: all .2s;
+}
+
+.widget-item.active {
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 8px;
+}
+
+.widget-item.active p {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* ...existing code... */

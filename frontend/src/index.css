@@ -1,0 +1,89 @@
+:root{
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #0f172a;        /* near-black */
+  --muted: #6b7280;       /* grey */
+  --primary: #2563eb;     /* blue */
+  --primary-600: #1e40af;
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.85);
+  --shadow: rgba(15,23,42,0.06);
+  --radius: 12px;
+  --gap: 16px;
+  --mono-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{ box-sizing: border-box; margin:0; padding:0; }
+
+html,body,#root{ height:100%; }
+
+body{
+  font-family: var(--mono-sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height:1.4;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-width:320px;
+  margin:0;
+  background-color: #f8fafc; /* светлый серо-голубой */
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.08) 0%, transparent 25%);
+  background-attachment: fixed; 
+}
+
+/* links / accents */
+a{ color: var(--primary); text-decoration: none; font-weight: 500; }
+a:hover{ color: var(--primary-600); text-decoration: underline; }
+
+/* headings */
+h1,h2,h3{ color:var(--text); }
+
+/* buttons */
+button{
+  font-family: inherit;
+  border-radius: 10px;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  transition: transform .12s, box-shadow .12s, background .12s;
+}
+button:hover{ background: var(--primary-600); transform: translateY(-2px); }
+button:focus{ outline: 3px solid rgba(37,99,235,0.18); outline-offset: 2px; }
+
+/* form controls */
+input, textarea, select {
+  font: inherit;
+  border: 1px solid #e6e9ee;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--text);
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 6px 18px rgba(37,99,235,0.08);
+  outline: none;
+}
+
+/* utility */
+.container{ max-width:1280px; margin:0 auto; padding: 24px; }
+
+/* simple light/dim switch (optional) */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b0f1a;
+    --surface: #071025;
+    --text: #e6eef8;
+    --muted: #95a4b8;
+    --card: #071025;
+    --glass: rgba(6,10,18,0.6);
+    --shadow: rgba(0,0,0,0.6);
+  }
+  a{ color: #93c5fd; }
+  button{ background: #3b82f6; }
+}
