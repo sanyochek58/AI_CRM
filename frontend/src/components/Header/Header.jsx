@@ -1,6 +1,7 @@
 import "./Header.css";
 import { Link, useLocation } from "react-router-dom";
 import avatarImg from "../../assets/react.svg";
+import LogoImg from "../../assets/logo.png";
 
 export default function Header() {
   const name = "username";
@@ -10,6 +11,12 @@ export default function Header() {
     <header className="header">
       <div className="header-inner">
         <div className="left-header-item">
+          <div className="logo-header">
+            <img
+              src={LogoImg}
+              alt="AI CRM Logo"
+            />
+          </div>
           <p className="welcome">Welcome to</p>
           <p className="title">AI CRM</p>
         </div>

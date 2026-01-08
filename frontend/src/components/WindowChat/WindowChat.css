@@ -1,0 +1,120 @@
+.window-chat-block {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-height: 0; /* важно */
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* HEADER */
+.window-chat-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.chat-header-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.chat-header-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.chat-header-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+.chat-header-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chat-header-info p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* MESSAGES */
+.window-chat-messages {
+  flex: 1;
+  min-height: 0; /* важно */
+  padding: 24px;
+  overflow-y: auto;
+  background: #f9fafb;
+}
+/* MESSAGE */
+.message-item {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.message-content {
+  max-width: 65%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.message-user .message-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px 16px 16px 4px;
+}
+
+.message-me .message-content {
+  background: #3b82f6;
+  color: white;
+  border-radius: 16px 16px 4px 16px;
+  margin-left: auto;
+}
+
+.message-time {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* INPUT */
+.window-chat-input {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.window-chat-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.window-chat-input button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,85 @@
+.chat-page-block {
+  /* Полная высота экрана */
+  height: 100dvh;
+  width: 100%;
+
+  /* Если сверху фиксированный header — чтобы контент не уезжал под него */
+  padding-top: var(--app-header-height, 72px);
+  box-sizing: border-box;
+
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.chat-page-inner {
+  /* Важно: чтобы внутренние блоки могли корректно скроллиться */
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+}
+
+.chat-page-left-column {
+  min-height: 0;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: #1e293b;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chat-page-title {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  flex-shrink: 0;
+}
+
+.chat-page-right-column {
+  min-height: 0;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+}
+
+.no-user-selected {
+  margin: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .chat-page-inner {
+    grid-template-columns: 300px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-page-block {
+    padding-top: var(--app-header-height, 72px);
+  }
+
+  .chat-page-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-page-left-column {
+    display: none;
+  }
+}

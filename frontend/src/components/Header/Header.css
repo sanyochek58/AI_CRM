@@ -14,6 +14,13 @@
   box-shadow: 0 16px 40px rgba(2, 6, 23, 0.35);
 
   backdrop-filter: blur(10px);
+
+  /* prevent big logo image from bleeding outside header */
+  overflow: hidden;
+}
+
+:root{
+  --app-header-height: 92px;
 }
 
 .header-widgets{
@@ -38,9 +45,26 @@
 /* left */
 .left-header-item{
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
   min-width: 0;
+}
+
+.logo-header{
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-header img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .title{
@@ -271,12 +295,15 @@
 /* mobile */
 @media (max-width: 640px){
   .header{ height: 76px; }
+  :root{ --app-header-height: 76px; }
   .header-inner{ padding: 0 14px; }
   .title{ font-size: 18px; }
   .subtitle{ display: none; }
   .user-block{ width: 64px; }
   .user-avatar{ width: 40px; height: 40px; }
   .header-offset{ height: 76px; }
+
+  .logo-header{ width: 48px; height: 48px; }
 }
 
 .widget-item {
